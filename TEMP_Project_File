@@ -1,0 +1,20 @@
+import java.util.*;
+
+class ping {
+  public static Scanner rfid = new Scanner(System.in);
+  public static int idList[] = new int[5];
+  private static int n;
+  
+  public static void main(String[] args){
+    id(idList);
+    System.out.println(Arrays.toString(idList));
+  }
+  
+  public static void id(int[] x){
+    System.out.println("Enter up to 5 user ID's here: ");
+    for(int i = 0; i < x.length; i++){
+      n = rfid.nextInt();
+      x[i] = n;
+    }
+  }
+}
