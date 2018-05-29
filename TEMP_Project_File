@@ -15,6 +15,10 @@ class ping {
     for(int i = 0; i < x.length; i++){
       n = rfid.nextInt();
       x[i] = n;
-    }
+    
   }
+  // lnD1Pn = Math.sqrt(Math.pow(lnD0pn, 2) + Math.pow(lnDD, 2) - (2 * lnD0Pn * DD * Math.cos(angD1D0Pn)));
+  // angGDR = Math.acos((lnE / lnDR));
+  // ang GDPn = Math.acos((lnE / lnD1Pn);
+  // lnPnR = Math.sqrt(Math.pow(lnD1Pn, 2) + Math.pow(lnDR, 2) - (2 * lnD1Pn * DR * Math.cos(angPnDR)));
 }
