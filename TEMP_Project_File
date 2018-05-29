@@ -2,7 +2,13 @@ import java.util.*;
 
 class ping {
   public static Scanner rfid = new Scanner(System.in);
-  public static int idList[] = new int[5];
+  public static int idList[] = new int[3];
+  public static int lnD0Pn[] = new int[3];
+  public static int angD1D0Pn[] = new int[3];
+  public static int lnD1Pn[] = new int[3];
+  public static int angGDPn[] = new int[3];
+  public static int angPnDR[] = new int[3];
+  public static int angPnR[] = new int[3];
   private static int n;
   
   public static void main(String[] args){
