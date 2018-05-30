@@ -1,3 +1,4 @@
+
 import java.util.*;
 
 class ping {
@@ -6,9 +7,10 @@ class ping {
   public static int lnD0Pn[] = new int[3];
   public static int angD1D0Pn[] = new int[3];
   public static int lnD1Pn[] = new int[3];
+  public static int angGDR[] = new int[3];
   public static int angGDPn[] = new int[3];
   public static int angPnDR[] = new int[3];
-  public static int angPnR[] = new int[3];
+  public static int lnPnR[] = new int[3];
   private static int n;
   private static double lnDD, lnE, lnDR;
   
@@ -23,7 +25,7 @@ class ping {
     System.out.println(lnE);
     System.out.println(lnDR);
     locCalc(idList);
-    System.out.pringln(Arrays.toString(lnPnR));
+    System.out.println(Arrays.toString(lnPnR));
   }
   
   public static void id(int[] x){
@@ -55,10 +57,10 @@ class ping {
   
   public static void locCalc(int[] x){
   for(int i = 0; i < x.length; i++){
-  lnD1Pn[i] = Math.sqrt(Math.pow(lnD0pn[i], 2) + Math.pow(lnDD, 2) - (2 * lnD0Pn[i] * DD * Math.cos(angD1D0Pn[i])));
+  lnD1Pn[i] = Math.sqrt(Math.pow(lnD0Pn[i], 2) + Math.pow(lnDD, 2) - (2 * lnD0Pn[i] * lnDD * Math.cos(angD1D0Pn[i])));
   angGDR[i] = Math.acos((lnE / lnDR));
-  angGDPn[i] = Math.acos((lnE / lnD1Pn[i]);
-  lnPnR[i] = Math.sqrt(Math.pow(lnD1Pn[i], 2) + Math.pow(lnDR, 2) - (2 * lnD1Pn[i] * DR * Math.cos(angPnDR[i])));
+  angGDPn[i] = Math.acos((lnE / lnD1Pn[i]));
+  lnPnR[i] = Math.sqrt(Math.pow(lnD1Pn[i], 2) + Math.pow(lnDR, 2) - (2 * lnD1Pn[i] * lnDR * Math.cos(angPnDR[i])));
     }
   }
 }
