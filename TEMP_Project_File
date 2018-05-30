@@ -1,22 +1,25 @@
-
+package drone;
 import java.util.*;
 
 class ping {
   public static Scanner rfid = new Scanner(System.in);
+  //idList = List of people
   public static int idList[] = new int[3];
-  public static int lnD0Pn[] = new int[3];
-  public static int angD1D0Pn[] = new int[3];
-  public static int lnD1Pn[] = new int[3];
-  public static int angGDR[] = new int[3];
-  public static int angGDPn[] = new int[3];
-  public static int angPnDR[] = new int[3];
-  public static int lnPnR[] = new int[3];
+  //n variables
+  public static double lnD0Pn[] = new double[3];
+  public static double angD1D0Pn[] = new double[3];
+  public static double lnD1Pn[] = new double[3];
+  public static double angGDR[] = new double[3];
+  public static double angGDPn[] = new double[3];
+  public static double angPnDR[] = new double[3];
+  public static double lnPnR[] = new double[3];
+  //other variables
   private static int n;
   private static double lnDD, lnE, lnDR;
   
   public static void main(String[] args){
     id(idList);
-    System.out.println(Arrays.toString(idList));
+    System.out.println("The ID's entered were: " + Arrays.toString(idList));
     var(idList);
     System.out.println(Arrays.toString(lnD0Pn));
     System.out.println(Arrays.toString(angD1D0Pn));
@@ -61,6 +64,7 @@ class ping {
   angGDR[i] = Math.acos((lnE / lnDR));
   angGDPn[i] = Math.acos((lnE / lnD1Pn[i]));
   lnPnR[i] = Math.sqrt(Math.pow(lnD1Pn[i], 2) + Math.pow(lnDR, 2) - (2 * lnD1Pn[i] * lnDR * Math.cos(angPnDR[i])));
-    }
+  lnPnR[i] = Math.toDegrees(lnPnR[i]);
+  	}
   }
 }
