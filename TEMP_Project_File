@@ -31,7 +31,7 @@ class ping {
   lnD1Pn[i] = Math.sqrt(Math.pow(lnD0pn[i], 2) + Math.pow(lnDD, 2) - (2 * lnD0Pn[i] * DD * Math.cos(angD1D0Pn[i])));
   angGDR[i] = Math.acos((lnE / lnDR));
   angGDPn[i] = Math.acos((lnE / lnD1Pn[i]);
-  lnPnR[i] = Math.sqrt(Math.pow(lnD1Pn[i], 2) + Math.pow(lnDR[ 2) - (2 * lnD1Pn[i] * DR * Math.cos(angPnDR[i])));
+  lnPnR[i] = Math.sqrt(Math.pow(lnD1Pn[i], 2) + Math.pow(lnDR, 2) - (2 * lnD1Pn[i] * DR * Math.cos(angPnDR[i])));
     }
   }
 }
