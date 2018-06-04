@@ -26,10 +26,9 @@ class ping {
     System.out.println("Here are the inputes: ");
     System.out.println(Arrays.toString(lnD0Pn));
     System.out.println(Arrays.toString(angD1D0Pn));
-    System.out.println(Arrays.toString(angPnDR));
-    System.out.println(idList[0] + "'s information: " + lnD0Pn[0] + ", " + angD1D0Pn[0] + ", " + angPnDR[0]);
-    System.out.println(idList[1] + "'s information: " + lnD0Pn[1] + ", " + angD1D0Pn[1] + ", " + angPnDR[1]);
-    System.out.println(idList[2] + "'s information: " + lnD0Pn[2] + ", " + angD1D0Pn[2] + ", " + angPnDR[2]);
+    System.out.println(idList[0] + "'s information: " + lnD0Pn[0] + ", " + angD1D0Pn[0]);
+    System.out.println(idList[1] + "'s information: " + lnD0Pn[1] + ", " + angD1D0Pn[1]);
+    System.out.println(idList[2] + "'s information: " + lnD0Pn[2] + ", " + angD1D0Pn[2]);
     System.out.println(lnDD);
     System.out.println(lnE);
     System.out.println(lnDR);
@@ -56,8 +55,6 @@ class ping {
       lnD0Pn[i] = rfid.nextInt();
       System.out.println("Angle of the drone's starting position in relation to " + x[i] + ":");
       angD1D0Pn[i] = rfid.nextInt();
-      System.out.println("Angle of drone's final position in relation to " + x[i] + ":");
-      angPnDR[i] = rfid.nextInt();
     }
     System.out.println("Distane drone traveled: ");
     lnDD = rfid.nextDouble();
@@ -72,6 +69,7 @@ class ping {
   lnD1Pn[i] = Math.sqrt(Math.pow(lnD0Pn[i], 2) + Math.pow(lnDD, 2) - (2 * lnD0Pn[i] * lnDD * Math.cos(angD1D0Pn[i])));
   angGDR[i] = Math.acos((lnE / lnDR));
   angGDPn[i] = Math.acos((lnE / lnD1Pn[i]));
+  angPnDR[i] = angGDPn[i] + angGDR[i];
   lnPnR[i] = Math.sqrt(Math.pow(lnD1Pn[i], 2) + Math.pow(lnDR, 2) - (2 * lnD1Pn[i] * lnDR * Math.cos(angPnDR[i])));
   	}
   }
